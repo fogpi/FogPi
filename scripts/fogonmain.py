@@ -1,4 +1,4 @@
-import r
+
 import time
 import threading
 from threading import Thread
