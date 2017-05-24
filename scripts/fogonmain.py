@@ -171,7 +171,7 @@ def data_to_mySQL(hum, tempout, water, status=False):
     # upload to mySQL DB->collectfog, table->sensors
     conn = MySQLdb.connect(host="localhost",user="fogpi",passwd="getfog2014",db="collectfog")
     c = conn.cursor()
-    c.execute("INSERT INTO sensors(date, temperature, humidity, water) VALUES(%s,%s,%s,%s)",
+    c.execute("INSERT INTO sensors(date, humidity, temperature, water) VALUES(%s,%s,%s,%s)",
               (date, hum, tempout, water))
     conn.commit()
     conn.close()
